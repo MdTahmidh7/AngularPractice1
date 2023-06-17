@@ -1,0 +1,14 @@
+<div class="container">
+  <p>course works!</p>
+  <h2>{{mail.length}} Mail</h2>
+  <ul>
+    <li *ngFor="let mail of mail">
+      {{mail}}
+    </li>
+  </ul>
+
+  <input [(ngModel)]="email"  (keyup.enter)="onKeyUp()" >
+  <br>
+  <p>{{email | titlecase}}</p>
+  <button class="btn btn-danger mt-3" (click)="onClick()">Delete</button>
+</div>
